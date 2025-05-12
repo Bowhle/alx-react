@@ -1,0 +1,15 @@
+#count {
+  font-weight: bold;
+  margin-left: auto; /* Push the element to the right */
+  margin-right: 0;
+  display: inline-block; /* Make it display in line with button */
+}
+
+#logo {
+  width: 200px;
+  height: 200px;
+  background-image: url('../assets/holberton-logo.jpg'); /* Relative path to the image */
+  background-size: 200px 200px;
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
