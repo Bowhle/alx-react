@@ -1,10 +1,11 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'production', // Set Webpack mode to production
-  entry: './js/dashboard_main.js', // Entry point of your application
+  entry: './js/dashboard_main.js', // Entry point of the application
   output: {
     filename: 'bundle.js', // Output filename
     path: path.resolve(__dirname, 'public'), // Output directory (absolute path)
@@ -41,8 +42,6 @@ module.exports = {
       minimizer: {
         implementation: ImageMinimizerPlugin.imageminMinify,
         options: {
-          // Lossless optimization with the following settings:
-          // Feel free to experiment with different options for the best results
           plugins: [
             ['mozjpeg', { progressive: true }],
             ['pngquant', { quality: [0.6, 0.8] }],
@@ -73,6 +72,10 @@ module.exports = {
         },
       },
     }),
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+      filename: 'index.html', // Output filename in the 'public' folder
+      inject: 'body',
+    }),
   ],
 };
-
