@@ -1,80 +1,45 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'production', // Set Webpack mode to production
-  entry: './js/dashboard_main.js', // Entry point of the application
+  mode: 'production',
+  entry: './js/dashboard_main.js',
   output: {
-    filename: 'bundle.js', // Output filename
-    path: path.resolve(__dirname, 'public'), // Output directory (absolute path)
-    assetModuleFilename: 'images/[hash][ext][query]', //custom filename for assets
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'public'),
+    assetModuleFilename: 'images/[hash][ext][query]',
   },
   module: {
     rules: [
       {
-        test: /\.css$/i, // Rule for CSS files
+        test: /\.css$/i,
         use: [
-          MiniCssExtractPlugin.loader, // Extract CSS into separate file
-          'css-loader', //  Interprets @import and url() like import/require() and will resolve them
+          MiniCssExtractPlugin.loader,
+          'css-loader',
         ],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i, // Rule for image files
-        type: 'asset', // Use asset module type
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset',
         parser: {
           dataUrlCondition: {
-            maxSize: 10 * 1024, // 10KB
+            maxSize: 10 * 1024,
           },
         },
         generator: {
-          filename: 'images/[hash][ext][query]', // Output filename
+          filename: 'images/[hash][ext][query]',
         },
       },
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'styles.css', // Output filename for the CSS file
-    }),
-    new ImageMinimizerPlugin({
-      minimizer: {
-        implementation: ImageMinimizerPlugin.imageminMinify,
-        options: {
-          plugins: [
-            ['mozjpeg', { progressive: true }],
-            ['pngquant', { quality: [0.6, 0.8] }],
-            ['gifsicle', { interlaced: true }],
-            [
-              'svgo',
-              {
-                plugins: [
-                  {
-                    name: 'preset-default',
-                    params: {
-                      override: {
-                        removeViewBox: false, // Keep the viewBox attribute
-                        addAttributesToSVGElement: {
-                          params: {
-                            attributes: [
-                              { name: 'xmlns', value: 'http://www.w3.org/2000/svg' },
-                            ],
-                          },
-                        },
-                      },
-                    },
-                  },
-                ],
-              },
-            ],
-          ],
-        },
-      },
+      filename: 'styles.css',
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
-      filename: 'index.html', // Output filename in the 'public' folder
+      filename: 'index.html',
       inject: 'body',
     }),
   ],
