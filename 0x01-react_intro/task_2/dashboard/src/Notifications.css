@@ -2,11 +2,24 @@
   border: 1px solid #3ee084;
   padding-bottom: 0px;
   padding-left: 20px;
-  align-items: center;
+  align-items: left;
   display: flex;
   flex-direction: column;
   position: relative;
   top: 0;
-  left: 0;
+  left: 20px;
   z-index: 1000;
+}
+
+.Notifications ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.Notifications li[data-priority="default"] {
+  color: blue;
+}
+
+.Notifications li[data-priority="urgent"] {
+  color: red;
 }
