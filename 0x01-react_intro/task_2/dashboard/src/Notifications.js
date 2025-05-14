@@ -5,7 +5,7 @@ import { getLatestNotification } from './utils.js';
 
 // This component renders a list of notifications with a close button
 // The close button is styled to be positioned at the top right corner
-// The notifications are displayed in a list format
+
 function Notifications() {
   return (
     <div className="Notifications">

@@ -8,12 +8,14 @@
   position: relative;
   top: 0;
   left: 20px;
+  right: 20px;
   z-index: 1000;
 }
 
 .Notifications ul {
   list-style: none;
   padding-left: 0;
+  padding-right: 20px;
 }
 
 .Notifications li[data-priority="default"] {
