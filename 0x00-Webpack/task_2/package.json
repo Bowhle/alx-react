@@ -12,14 +12,22 @@
   "license": "ISC",
   "devDependencies": {
     "webpack": "^5.99.8",
-    "webpack-cli": "^6.0.1"
+    "webpack-cli": "^4.9.2"
   },
   "dependencies": {
     "css-loader": "^7.1.2",
     "file-loader": "^6.2.0",
+<<<<<<< HEAD
     "image-webpack-loader": "^8.1.0",
     "jquery": "^3.7.1",
     "lodash": "^4.17.21",
+=======
+    "html-webpack-plugin": "^5.6.3",
+    "image-webpack-loader": "^8.1.0",
+    "jquery": "^3.7.1",
+    "lodash": "^4.17.21",
+    "mini-css-extract-plugin": "^2.9.2",
+>>>>>>> 29c383c5a9caa719b52a9a98c4553c70089fd49a
     "style-loader": "^4.0.0"
   }
 }
