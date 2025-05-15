@@ -1,5 +1,5 @@
 {
-  "homepage": "https://bowhle.github.io/alx-react/0x01-react_intro/task_4/dashboard",
+  "homepage": "https://Bowhle.github.io/alx-react/0x01-react_intro/task_4/dashboard",
   "name": "dashboard",
   "version": "0.1.0",
   "private": true,
@@ -40,6 +40,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
-    "jest": "^27.5.1"
+    "jest": "^27.5.1",
+    "gh-pages": "^6.3.0"
   }
 }
