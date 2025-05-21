@@ -1,28 +1,25 @@
 import React from 'react';
+import { shallow } from 'enzyme';
 import App from './App';
 
 describe('App tests', () => {
   it('should render without crashing', () => {
-    render(<App />);
-    const headingElement = screen.getByRole('heading', { name: 'School dashboard' });
-    expect(headingElement).toBeInTheDocument();
+    const wrapper = shallow(<App />);
+    expect(wrapper.exists()).toBe(true);
   });
 
   it('should render a div with the class App-header', () => {
-    render(<App />);
-    const headerElement = screen.getByRole('banner');
-    expect(headerElement).toHaveClass('App-header');
+    const wrapper = shallow(<App />);
+    expect(wrapper.find('.App-header').length).toBe(1);
   });
 
   it('should render a div with the class App-body', () => {
-    render(<App />);
-    const bodyElement = document.querySelector('.App-body');
-    expect(bodyElement).toBeInTheDocument();
+    const wrapper = shallow(<App />);
+    expect(wrapper.find('.App-body').length).toBe(1);
   });
 
   it('should render a div with the class App-footer', () => {
-    render(<App />);
-    const footerElement = screen.getByRole('contentinfo');
-    expect(footerElement).toHaveClass('App-footer');
+    const wrapper = shallow(<App />);
+    expect(wrapper.find('.App-footer').length).toBe(1);
   });
 });
