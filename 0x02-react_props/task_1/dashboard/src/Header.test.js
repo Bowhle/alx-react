@@ -23,4 +23,3 @@ describe("Header component", () => {
     expect(title).toBeInTheDocument();
   });
 });
-
