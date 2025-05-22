@@ -11,6 +11,7 @@ function Header() {
             <img src={ALX_logo} className="ALX-logo" alt="ALX Logo" />
             <h1>School dashboard</h1>
         </div>
+        <hr className='header-separator' />
         </header>
     );
     }
