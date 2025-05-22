@@ -1,5 +1,5 @@
 import React from 'react';
-import ALX_logo from '../../ALX-logo.jpg';
+import ALX_logo from './ALX-logo.jpg';
 import './Header.css';
 
 // This code defines a functional React component called Header.
