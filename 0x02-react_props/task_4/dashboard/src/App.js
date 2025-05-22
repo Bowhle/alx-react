@@ -12,7 +12,7 @@ import CourseList from './CourseList/CourseList';
 function App(isLoggedIn) {
   return (
     <>
-    <Notifications />
+    <Notifications displayDrawer={true} />
     <div className="App">
       < Header />
       <div className="App-body">

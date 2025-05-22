@@ -8,6 +8,7 @@ function Notifications({ displayDrawer }) {
   return (
     <>
       <div className="menuItem">Your notifications</div>
+      <div className="Notifications"> Your notifications</div>
       {displayDrawer && (
         <div className="Notifications">
           <button
