@@ -12,4 +12,18 @@
   text-align: left;
   min-height: 60vh;
   border-top: 3px solid #e03e4d;
+  box-sizing: border-box;
+}
+
+/* When isLoggedin is false (login form) */
+.App-body--logged-out {
+  padding-top: 40px;
+  padding-left: 45px;
+  background: none;
+}
+
+/* When IsLoggedin is true (courses/dashboard) */
+.App-body--logged-in {
+  padding: 20px;
+  background: none;
 }

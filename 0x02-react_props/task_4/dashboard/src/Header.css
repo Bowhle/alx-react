@@ -15,4 +15,10 @@
   color: #e03e4d;
   font-size: 4vmin;
   margin: 0px;
+  padding-top: 20px;
+}
+
+.header-separator {
+  border-top: 3px solid #e03e4d;
+  padding-top: 20px;
 }

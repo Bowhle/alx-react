@@ -9,13 +9,13 @@ import Notifications from './Notifications';
 import CourseList from './CourseList/CourseList';
 
 
-function App(isLoggedIn) {
+function App({isLoggedIn}) {
   return (
     <>
     <Notifications displayDrawer={true} />
     <div className="App">
       < Header />
-      <div className="App-body">
+      <div className={isLoggedIn ? "App-body--logged-in" : "App-body--logged-out"} id="App-body">
       {isLoggedIn ? <CourseList /> : <Login />}
       </div>
       <div claccName="App-footer">
