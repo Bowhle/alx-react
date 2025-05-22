@@ -1,5 +1,5 @@
 import React from "react";
-import { getFullYear, getFooterCopy } from "../../utils";
+import { getFullYear, getFooterCopy } from "./utils";
 import "./Footer.css";
 
 // This code defines a functional React component called Footer.

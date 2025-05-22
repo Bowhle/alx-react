@@ -1,10 +1,10 @@
 import React from 'react';
 import ALX_logo from './ALX-logo.jpg';
 import './App.css';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import Login from './components/Login/Login';
-import Notifications from './components/Notifications/Notifications';
+import Header from './Header';
+import Footer from './Footer';
+import Login from './Login';
+import Notifications from './Notifications';
 
 function App() {
   return (
