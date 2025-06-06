@@ -50,7 +50,7 @@ This project, part of the ALX React curriculum, focuses on implementing state ma
    - File: `CourseListRow.js`
 
 ## Setup
-1. Clone: `git clone https://github.com/venopyx/alx-react.git`
+1. Clone: `git clone https://github.com/bowhle/alx-react.git`
 2. Navigate: `cd alx-react/0x05-react_state`
 3. Install: `npm install`
 4. Run: `npm start`
@@ -64,8 +64,8 @@ This project, part of the ALX React curriculum, focuses on implementing state ma
 - [Enzyme](https://enzymejs.github.io/enzyme/)
 
 ## Repository
-- **GitHub**: [alx-react](https://github.com/venopyx/alx-react)
+- **GitHub**: [alx-react](https://github.com/bowhle/alx-react)
 - **Directory**: `0x05-react_state`
 
 ## Author
-Gemechis Chala - [venopyx](https://github.com/venopyx)
+Samantha B Mkwananzi - [bowhle](https://github.com/bowhle)
